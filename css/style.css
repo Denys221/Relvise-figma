@@ -534,8 +534,6 @@ body {
     }
 }
 
-.practice__container {}
-
 .practice__header {
     margin: 0px 0px 45px 0px;
 }
@@ -619,10 +617,9 @@ body {
 
 
 .whoweare {
+    background: #FFFFFF;
     padding: 80px 0px 130px 0px;
 }
-
-.whoweare__container {}
 
 .whoweare__header {
     margin: 0px 0px 100px 0px;
@@ -630,7 +627,7 @@ body {
 
 .whoweare__body {
     display: flex;
-    /*щоб при зменшенні px відео було видно повністю */
+    /*щоб при зменшенні px відео було видно повністю а також щоб прижалося до верху*/
     align-items: flex-start;
 }
 
@@ -677,10 +674,6 @@ body {
     margin: 0px 0px 50px 0px;
 }
 
-.whoweare__items {}
-
-.whoweare__item {}
-
 .whoweare__item:not(:last-child) {
     margin: 0px 0px 30px 0px;
 }
@@ -720,4 +713,58 @@ body {
     width: 225px;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+
+@media (max-width: 1080px) {
+    .whoweare__content {
+        padding: 0px 0px 0px 50px;
+    }
+}
+
+@media (max-width: 950px) {
+    .whoweare {
+        padding: 50px 0px 50px 0px;
+    }
+
+
+    .whoweare__body {
+        flex-direction: column-reverse;
+        /*при зменшенні від 950 px блоки стають один зверху а другий знизу*/
+        align-items: stretch;
+        /*щоб зявилося відео*/
+    }
+
+    .whoweare__header {
+        margin: 0px 0px 30px 0px;
+    }
+
+    .whoweare__content {
+        padding: 0px 0px 0px 0px;
+    }
+
+    .whoweare__video {
+        padding: 0px 0px 56.25% 0px;
+    }
+
+    .whoweare__video:not(:last-child) {
+        margin: 50px 0px 0px 0px;
+    }
+
+    .whoweare__title {
+        font-size: 24px;
+    }
+}
+
+@media (max-width:767) {
+    .whoweare {
+        padding: 20px 0px 50px 0px;
+    }
+}
+
+.whoweare__top:not(:last-child) {
+    margin: 0px 0px 30px 0px;
+}
+
+.whoweare__video:not(:last-child) {
+    margin: 30px 0px 0px 0px;
 }
