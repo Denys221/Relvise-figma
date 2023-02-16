@@ -176,6 +176,8 @@ body {
 
 /*.page__subscribe{}*/
 
+/*.page__getintouch {}*/
+
 /*------HEADER BLOCK----------------------*/
 
 .header-block {
@@ -916,5 +918,144 @@ body {
 
     .subscribe__input {
         padding: 0px 15px;
+    }
+}
+
+/*--------page__getintouch getintouch----------------------------*/
+
+.getintouch {
+    padding: 80px 0px 135px 0px;
+}
+
+.getintouch__header {
+    margin: 0px 0px 80px 0px;
+}
+
+.getintouch__items {
+    margin: 0px -15px;
+}
+
+/* з початку було так:
+.getintouch__items {
+        display: flex;
+        align-items: center;
+а потім ми йго поклали в min-width: 992 для адаптиву*/
+
+.getintouch__item {
+    flex: 0 1 33.333%;
+}
+
+.item-getintouch {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFFFFF;
+    padding: 50px 40px;
+}
+
+.item-getintouch>*:not(:last-child) {
+    margin: 0px 0px 15px 0px;
+}
+
+.item-getintouch_active {
+    background-color: #252B42;
+    padding: 80px 0px;
+    color: #fff;
+}
+
+.item-getintouch_active .item-getintouch__label {
+    color: #fff;
+}
+
+.item-getintouch_active .item-getintouch__button {
+    border: 1px solid #fff;
+    color: #fff;
+}
+
+.item-getintouch__icon {}
+
+.item-getintouch__emails {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.item-getintouch__email {
+    color: inherit;
+    font-weight: 600;
+    line-height: 150%;
+    letter-spacing: 0.2px;
+    font-size: 16px;
+}
+
+.item-getintouch__email:hover {
+    text-decoration: underline;
+}
+
+.item-getintouch__label {
+    font-weight: 700;
+    letter-spacing: 0.1px;
+    line-height: 150%;
+    font-size: 16px;
+    color: #252B42;
+}
+
+.item-getintouch__button {
+    border: 1px solid #FF7B47;
+    min-height: 44px;
+    display: flex;
+    font-weight: 600;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #FF7B47;
+    line-height: 142%;
+    letter-spacing: 0.2px;
+    padding: 5px 20px;
+    transition: all 0.3s ease 0s;
+    border-radius: 5px;
+}
+
+.item-getintouch__button:hover {
+    border: 1px solid #ff7b47;
+    background-color: #FF7B47;
+    color: #fff;
+}
+
+@media (min-width: 992px) {
+    .getintouch__items {
+        display: flex;
+        align-items: center;
+        margin: 0px;
+    }
+}
+
+@media (max-width: 992px) {
+    .getintouch {
+        padding: 50px 0px;
+    }
+
+    .getintouch__header {
+        margin: 0px 0px 50px 0px;
+    }
+
+    .item-getintouch {
+        padding: 40px 40px;
+    }
+
+    .item-getintouch_active {
+        padding: 50px 15px;
+    }
+}
+
+@media (max-width: 767px) {
+    .getintouch__header {
+        margin: 0px 0px 30px 0px;
+    }
+
+    .item-getintouch {
+        padding: 35px 20px;
     }
 }
