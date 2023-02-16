@@ -178,6 +178,8 @@ body {
 
 /*.page__getintouch {}*/
 
+/*.page__contact {}*/
+
 /*------HEADER BLOCK----------------------*/
 
 .header-block {
@@ -939,7 +941,7 @@ body {
 .getintouch__items {
         display: flex;
         align-items: center;
-а потім ми йго поклали в min-width: 992 для адаптиву*/
+а потім ми йго поклали в (min-width: 992px) для адаптиву*/
 
 .getintouch__item {
     flex: 0 1 33.333%;
@@ -1058,4 +1060,76 @@ body {
     .item-getintouch {
         padding: 35px 20px;
     }
+}
+
+/*--------page__contact contact----------------------------*/
+
+.contact {
+    background-color: #fff;
+    padding: 42px 0px;
+}
+
+.contact__content {
+    padding: 0px 0px 20px 0px;
+}
+
+/* з початку було так:
+  .contact__body {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+а потім ми йго поклали в (min-width: 767px) для адаптиву*/
+
+@media (min-width: 767px) {
+    .contact__body {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .contact__content {
+        padding: 0px 20px 0px 0px;
+    }
+}
+
+.contact__title {
+    font-weight: 700;
+    letter-spacing: 0.1px;
+    font-size: 24px;
+    line-height: 133%;
+    color: #252B42;
+}
+
+.contact__title:not(:last-child) {
+    margin: 0px 0px 10px 0px;
+}
+
+.contact__text {
+    font-weight: 500;
+    letter-spacing: 0.2px;
+    font-size: 14px;
+    line-height: 142%;
+    color: #737373;
+}
+
+.contact__button {
+    display: flex;
+    border-radius: 5px;
+    background-color: #FF7B47;
+    min-height: 58px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    font-weight: 700;
+    padding: 5px 40px;
+    letter-spacing: 0.2px;
+    font-size: 14px;
+    line-height: 200%;
+    transition: background-color all 0.3s ease 0s;
+}
+
+.contact__button:hover {
+    background-color: #aa5330;
 }
